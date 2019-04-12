@@ -25,16 +25,25 @@ namespace BookManager
             return title;
         }
 
-        //method that sets the title
+        //method that sets the title => altered to check if title is null and >0, then saves
         public void SetTitle(string title)
         {
-            this.title = title;
+            if (title != null && title.Length > 0)
+            {
+                this.title = title;
+            }
         }
 
-        //method dat counts words
+        //method that counts words
         public void AssignWordCountFromText(string text)
         {
             wordCount = text.Split(' ').Length;
+        }
+
+        //method that returns the length of the title
+        public int GetTitleLength()
+        {
+            return title.Length;
         }
     }
 }
