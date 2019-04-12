@@ -48,6 +48,8 @@ namespace BookManager
                 Console.WriteLine($"The book is called: {title} (It has a length of{title.Length} caracters)");
                 Console.WriteLine($"The author is called: {author}");
             }
+            //displays the number of books inputed
+            Console.WriteLine($"Number of books created: {Book.GetBookCoun()}");
         }
     }
 }
